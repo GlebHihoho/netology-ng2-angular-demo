@@ -6,11 +6,20 @@
     <option value="id">ID</option>
     <option value="weight">Весу</option>
     <option value="height">Росту</option>
+    <option value="name">Имени</option>
 </select>
+<!---Сортировать по типу:
+<select ng-model="myOrderProperty">
+    <option value="type">normal</option>
+    <option value="type">electric</option>
+    <option value="type">water</option>
+    <option value="type">fire</option>
+    <option value="type">grass</option>
+</select>-->
 
 <ul>
     <li ng-repeat="pokemon in pokemons | filter: myQuery | orderBy: myOrderProperty">
-        <img src="{{pokemon.ThumbnailImage}}">
+        <img src="{{pokemon.ThumbnailImage}}" ng-click="name(pokemon.name)">
 
         <small>ID #{{pokemon.id }}</small>
         <h1>{{pokemon.name}}</h1>

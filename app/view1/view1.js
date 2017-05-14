@@ -121,5 +121,8 @@ angular.module('myApp.view1', ['ngRoute'])
         }];
 
         $scope.myOrderProperty = 'id';
+        $scope.name = function(name) {
+            alert(name);
+        }
 
     });
